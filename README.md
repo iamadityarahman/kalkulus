@@ -1,4 +1,4 @@
-# WEB KALKULUS LANJUR
+# WEB KALKULUS LANJUT
 
 Untuk menyelesaikan tugas dari Bapak Zainal pengampu mata kuliah kalkulus lanjut.
 
