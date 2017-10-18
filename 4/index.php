@@ -1,48 +1,20 @@
 <?php
-	Include "../php/koneksi.php";
-	Include "../php/regression.php";
-	Include "../php/fungsi.php";
+	$title = "Prediksi Keuntungan";
+	Include "../content/head.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link rel="stylesheet" href="../css/w3.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <title>Prediksi Keuntungan</title>
-</head>
 <body>
-	<!-- Sidebar -->
-	<div class="w3-sidebar w3-bar-block w3-animate-left w3-border-right w3-small" style="display:none" id="mySidebar">
-		<button onclick="tutup_sidebar()" class="w3-bar-item w3-large">Tutup &times;</button>
-		<a href="/3" class="w3-bar-item w3-button">Pendaftaran Asuransi</a>
-		<a href="/4" class="w3-bar-item w3-button">Prediksi Keuntungan</a>
-		<a href="https://github.com/iamadityarahman/kalkulus_v2.git" class="w3-bar-item w3-button"><i class="fa fa-github" aria-hidden="true"> Github</i></a>
-	</div>
-	
-	<!-- Navbar -->
-	<div class="w3-bar w3-black w3-xxlarge">
-		<button class="w3-button w3-left" onclick="buka_sidebar()">☰</button>
-   		<span class="w3-bar-item">Kalkulus Lanjut</span>
-    </div>
+	<? Include "../content/atas.php"; ?>
     
     <!-- konten -->
     <div class="w3-container">
-    	<br/>
-    	
-    	<h1>History Pemasukan Perusahaan</h1>
-    	
+    	<h1>Riwayat Pemasukan Perusahaan</h1>
     	<div class="w3-responsive">
     		<table class="w3-table-all">
     			<tr>
-    				<th>Tahun</th>
-    				<th>Jumlah Nasabah</th>
-    				<th>Jumlah Premi (Rp)</th>
-    				<th>Laba (Rp)</th>
+    				<th class="w3-center">Tahun</th>
+    				<th class="w3-center">Jumlah Nasabah</th>
+    				<th class="w3-center">Jumlah Premi (Rp)</th>
+    				<th class="w3-center">Laba Per-tahun(Rp)</th>
     			</tr>
     			
     			<?php
@@ -61,17 +33,15 @@
 						$regLaba->addData( $tahun, $laba );
 						
 						echo "<tr>
-								<td>".$tahun."</td>
-								<td>".$nasabah."</td>
-								<td>".pisahRibuan1000($premi)."</td>
-								<td>".pisahRibuan1000($laba)."</td>
+								<td class='w3-center'>".$tahun."</td>
+								<td class='w3-center'>".$nasabah."</td>
+								<td class='w3-right-align'>".pisahRibuan1000($premi)."</td>
+								<td class='w3-right-align'>".pisahRibuan1000($laba)."</td>
 						 	  </tr>";
 					}
 											
 					$coeLaba = $regLaba->getCoefficients();
-					
 					$pred_tahun = 2017;
-				
 					$prediksi_laba = $regLaba->interpolate( $coeLaba, $pred_tahun );
 				?>
 			</table>
@@ -81,15 +51,6 @@
 			<h3>Prediksi pada tahun <?=$pred_tahun?> akan mendapatkan keuntungan sebesar <b><?=rpPisahRibuan1000($prediksi_laba)?></b></h3>
 		</div>   		
     </div>
-    
-    <script>
-		
-	function buka_sidebar() {
-		document.getElementById("mySidebar").style.display = "block"; }
-		
-	function tutup_sidebar() {
-		document.getElementById("mySidebar").style.display = "none"; }
-		
-	</script>
+    <? Include "../content/bawah.php"?>
 </body>
 </html>
