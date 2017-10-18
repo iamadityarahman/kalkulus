@@ -1,4 +1,7 @@
-# kalkulus_v2
-Tugas kalkulus lanjut dari bapak zainal.
+# WEB KALKULUS LANJUR
 
-Cuman belajar pakai github.
+Untuk menyelesaikan tugas dari Bapak Zainal pengampu mata kuliah kalkulus lanjut.
+
+Anggota kelompok:
+1. Achmad Yulianto Firdausi (160535611822)
+2. Aditya Rahman (160535611825)
