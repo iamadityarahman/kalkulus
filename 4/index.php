@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <link rel="stylesheet" href="../css/w3.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>Prediksi Keuntungan</title>
 </head>
@@ -20,6 +21,7 @@
 		<button onclick="tutup_sidebar()" class="w3-bar-item w3-large">Tutup &times;</button>
 		<a href="/3" class="w3-bar-item w3-button">Pendaftaran Asuransi</a>
 		<a href="/4" class="w3-bar-item w3-button">Prediksi Keuntungan</a>
+		<a href="https://github.com/iamadityarahman/kalkulus_v2.git" class="w3-bar-item w3-button"><i class="fa fa-github" aria-hidden="true"> Github</i></a>
 	</div>
 	
 	<!-- Navbar -->
