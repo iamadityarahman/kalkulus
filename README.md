@@ -1,6 +1,9 @@
 # WEB KALKULUS LANJUT
 
-Untuk menyelesaikan tugas dari Bapak Zainal pengampu mata kuliah kalkulus lanjut.
+Git ini berisikan source code untuk web tugas kalkulus lanjut...
+
+Dosen Pengampu:
+Bapak Zainal
 
 Anggota kelompok:
 1. Achmad Yulianto Firdausi (160535611822)
